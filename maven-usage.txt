@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Configurando variavel de ambiente
 export PATH=$PATH:/Users/alura/Documents/guilherme/workspace/apache-maven-3.3.9/bin
 
