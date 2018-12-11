@@ -43,6 +43,13 @@
 			<version>2.8.5</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+		<dependency>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.2</version>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -53,6 +60,7 @@
 
 	<build>
 		<plugins>
+			<!-- https://maven.apache.org/plugins/maven-pmd-plugin/usage.html -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
@@ -81,6 +89,22 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<!-- https://www.eclemma.org/jacoco/trunk/doc/maven.html -->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.2-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 		<pluginManagement>			<!-- lock down plugins versions to avoid using Maven 
 				defaults (may be moved to parent pom) -->
