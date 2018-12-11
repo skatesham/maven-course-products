@@ -4,9 +4,7 @@ Projeto com Maven
 ### Criando Projecto Quickstart Maven
 ```mvn archetype:generate -DartifactId=produtos -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.3```
 
-### Instalar pluggin para página html com testes
-### Primeiro declararemos o nome do plugin, em
-### seguida o nome do objetivo no caso, surefire-report: e report.
+### Instalar pluggin para página html com testes. Primeiro declararemos o nome do plugin, em seguida o nome do objetivo no caso, surefire-report: e report.
 `mvn surefire-report:report`
 
 ### Compile
@@ -16,8 +14,7 @@ Projeto com Maven
 ``` <packaging>jar</packaging> ```  
 `mvn package`
 
-### para executar um arquivo jar criado pelo maven...
-### -cp (classpath do jar) + pacote.pacote.Class (classe que contem o Main)
+### para executar um arquivo jar criado pelo maven... -cp (classpath do jar) + pacote.pacote.Class (classe que contem o Main)
 `java -cp target/produtos-1.0-SNAPSHOT.jar br.com.alura.maven.App`
 
 ### Criar site com teste de qualidade
