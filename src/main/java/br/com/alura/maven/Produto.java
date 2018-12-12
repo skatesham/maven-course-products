@@ -25,6 +25,10 @@ public class Produto {
 		return this.categoria;
 	}
 
+	public double precoComImposto(){
+		return this.preco * 1.1;
+	}
+
 	@Override
 	public String toString(){
 		return "Produto: "+this.nome+" Preço: "+this.preco+" Categoria: "+this.categoria;

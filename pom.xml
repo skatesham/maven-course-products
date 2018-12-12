@@ -9,7 +9,7 @@
 
 	<packaging>jar</packaging>
 
-	<version>1.0-SNAPSHOT</version>
+	<version>2.0-SNAPSHOT</version>
 
 	<name>produtos</name>
 	<!-- FIXME change it to the project's website -->
@@ -43,20 +43,31 @@
 			<version>2.8.5</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
-			<groupId>org.jacoco</groupId>
-			<artifactId>jacoco-maven-plugin</artifactId>
-			<version>0.8.2</version>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.4</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.11.0</version>
+			</plugin>
+		</plugins>
+	</reporting>
 
 	<build>
 		<plugins>
@@ -67,34 +78,19 @@
 				<version>3.11.0</version>
 				<executions>
 					<execution>
-						<id>execution1</id>
 						<phase>verify</phase>
 						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>execution2</id>
-						<phase>compile</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>execution3</id>
-						<phase>package</phase>
-						<goals>
+							<goal>pmd</goal>
 							<goal>check</goal>
 						</goals>
 					</execution>
 				</executions>
 			</plugin>
 
-			<!-- https://www.eclemma.org/jacoco/trunk/doc/maven.html -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.2-SNAPSHOT</version>
+				<version>0.7.5.201505241946</version>
 				<executions>
 					<execution>
 						<goals>
@@ -102,12 +98,13 @@
 							<goal>report</goal>
 						</goals>
 					</execution>
+
 				</executions>
 			</plugin>
 
 		</plugins>
-		<pluginManagement>			<!-- lock down plugins versions to avoid using Maven 
-				defaults (may be moved to parent pom) -->
+		<pluginManagement>			<!-- lock down plugins versions to avoid using Maven defaults (may be moved 
+				to parent pom) -->
 			<plugins>
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
@@ -138,6 +135,7 @@
 					<artifactId>maven-deploy-plugin</artifactId>
 					<version>2.8.2</version>
 				</plugin>
+
 			</plugins>
 		</pluginManagement>
 	</build>
