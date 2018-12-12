@@ -62,7 +62,7 @@ Tambem foi desenvolvido uma [aplicação web](https://github.com/skatesham/webap
   ```
     
 ### Certificado do Curso
-![alt text](https://raw.githubusercontent.com/skatesham/webapp-jetty-maven/master/src/main/webapp/stati/img/certificado.png).
+![alt text](https://raw.githubusercontent.com/skatesham/maven-course-products/master/src/main/java/br/com/alura/maven/certificado.png).
 
 #### Curso Maven: Build do zero a web
 Esse projeto é o baseado no trabalho final do [Curso Maven: Build do zero a web](https://cursos.alura.com.br/course/maven-build-do-zero-a-web).
