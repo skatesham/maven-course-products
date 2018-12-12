@@ -59,7 +59,7 @@ Tambem foi desenvolvido uma [aplicação web](https://github.com/skatesham/webap
 			</plugin>
 		</plugins>
     <build>
-    
+  ```
     
 ### Certificado do Curso
 ![alt text](https://raw.githubusercontent.com/skatesham/webapp-jetty-maven/master/src/main/webapp/stati/img/certificado.png).
@@ -68,4 +68,4 @@ Tambem foi desenvolvido uma [aplicação web](https://github.com/skatesham/webap
 Esse projeto é o baseado no trabalho final do [Curso Maven: Build do zero a web](https://cursos.alura.com.br/course/maven-build-do-zero-a-web).
 
 ##### Desenvolvido por Sham Vinicius Fiorin
-```
+
